@@ -103,7 +103,7 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary rounded-3xl p-1 group-hover:scale-105 transition-transform duration-500">
                 <div className="w-full h-full rounded-[1.375rem] bg-background/95 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                   <img
-                    src="/lovable-uploads/ca759ab0-b524-42f7-aa0f-f5f08ee3afaf.png"
+                    src="/src/assets/ajith-professional.jpg"
                     alt="Ajith V"
                     className="w-full h-full object-cover rounded-[1.375rem] group-hover:scale-110 transition-transform duration-700"
                   />
