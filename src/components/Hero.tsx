@@ -19,69 +19,112 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="hero-decoration top-20 left-10 w-16 h-16 border-2 border-primary rotate-45 animate-float"></div>
-      <div className="hero-decoration top-40 right-20 w-12 h-12 border-2 border-accent rotate-12 animate-float" style={{ animationDelay: '2s' }}></div>
-      <div className="hero-decoration bottom-32 left-20 w-20 h-20 border-2 border-primary/50 rotate-45 animate-float" style={{ animationDelay: '4s' }}></div>
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/80"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,hsl(var(--primary)/0.1),transparent_70%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,hsl(var(--accent)/0.1),transparent_70%)]"></div>
       
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Floating Decorative Elements */}
+      <div className="hero-decoration top-20 left-10 w-16 h-16 border-2 border-primary/30 rotate-45 animate-float backdrop-blur-sm bg-primary/5 rounded-lg"></div>
+      <div className="hero-decoration top-40 right-20 w-12 h-12 border-2 border-accent/30 rotate-12 animate-float backdrop-blur-sm bg-accent/5 rounded-lg" style={{ animationDelay: '2s' }}></div>
+      <div className="hero-decoration bottom-32 left-20 w-20 h-20 border-2 border-primary/20 rotate-45 animate-float backdrop-blur-sm bg-primary/3 rounded-lg" style={{ animationDelay: '4s' }}></div>
+      <div className="hero-decoration top-32 right-40 w-8 h-8 border border-accent/40 rotate-45 animate-float backdrop-blur-sm bg-accent/10 rounded-md" style={{ animationDelay: '6s' }}></div>
+      
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
         {/* Content */}
         <div className="space-y-8 text-center lg:text-left">
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          {/* Status Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
+            <span className="text-sm font-medium text-primary">Available for new opportunities</span>
+          </div>
+
+          <div className="space-y-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
               Turning Ideas into{' '}
-              <span className="gradient-text">Intelligent Systems</span>
+              <span className="gradient-text bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">
+                Intelligent Systems
+              </span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              I'm a CSBS graduate passionate about AI/ML, automation, and building meaningful solutions that scale.
+            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              I'm a CSBS graduate passionate about AI/ML, automation, and building meaningful solutions that scale across industries.
             </p>
           </div>
 
-          {/* Connect Section */}
-          <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
-              <Input
-                type="email"
-                placeholder="Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-card border-border"
-              />
-              <Button 
-                onClick={handleConnect}
-                className="bg-gradient-primary hover:opacity-90 btn-glow"
-              >
-                Connect With Me
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+          {/* Connect Section with Glassmorphism */}
+          <div className="space-y-6">
+            <div className="bg-card/50 backdrop-blur-xl border border-border/50 rounded-2xl p-6 shadow-2xl">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input
+                  type="email"
+                  placeholder="Enter your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 bg-background/50 border-border/50 backdrop-blur-sm h-12 text-base"
+                />
+                <Button 
+                  onClick={handleConnect}
+                  className="bg-gradient-primary hover:opacity-90 btn-glow h-12 px-8 font-semibold"
+                >
+                  Connect With Me
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <Button variant="outline" className="group">
-                <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button variant="outline" className="group h-12 px-8 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300">
+                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 Download Resume
               </Button>
-              <Button variant="ghost">
+              <Button variant="ghost" className="h-12 px-8 hover:bg-accent/10 transition-all duration-300">
                 Explore My Work
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
+
+          {/* Tech Stack Pills */}
+          <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+            {['Python', 'AI/ML', 'React', 'Computer Vision'].map((tech) => (
+              <div key={tech} className="px-3 py-1 bg-secondary/50 backdrop-blur-sm rounded-full text-sm font-medium border border-border/30">
+                {tech}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Profile Image */}
+        {/* Enhanced Profile Image */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gradient-primary p-1">
-              <div className="w-full h-full rounded-xl bg-background flex items-center justify-center">
-                <img
-                  src="/lovable-uploads/ca759ab0-b524-42f7-aa0f-f5f08ee3afaf.png"
-                  alt="Ajith V"
-                  className="w-full h-full object-cover rounded-xl"
-                />
+          <div className="relative group">
+            {/* Main Image Container */}
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              {/* Gradient Border */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary rounded-3xl p-1 group-hover:scale-105 transition-transform duration-500">
+                <div className="w-full h-full rounded-[1.375rem] bg-background/95 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/lovable-uploads/ca759ab0-b524-42f7-aa0f-f5f08ee3afaf.png"
+                    alt="Ajith V"
+                    className="w-full h-full object-cover rounded-[1.375rem] group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
               </div>
+              
+              {/* Floating Card */}
+              <div className="absolute -bottom-6 -right-6 bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-4 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                  <div>
+                    <p className="text-sm font-semibold">Based in</p>
+                    <p className="text-xs text-muted-foreground">Mangaluru, India</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Glow Effects */}
+              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-primary/30 blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="absolute -z-20 inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 blur-[100px] opacity-30"></div>
             </div>
-            <div className="absolute -z-10 inset-0 bg-gradient-primary blur-3xl opacity-30"></div>
           </div>
         </div>
       </div>
