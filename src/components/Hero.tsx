@@ -73,7 +73,11 @@ export const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="outline" className="group h-12 px-8 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300">
+              <Button 
+                variant="outline" 
+                className="group h-12 px-8 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1MAHynlV739IoH10I3qbsAjvHaIbZfdXp', '_blank')}
+              >
                 <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 Download Resume
               </Button>
