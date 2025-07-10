@@ -8,12 +8,18 @@ export const Hero = () => {
   const [email, setEmail] = useState('');
 
   const handleConnect = () => {
-    if (email) {
+    if (email.trim()) {
       toast({
         title: "Thanks for connecting!",
         description: "I'll get back to you soon.",
       });
       setEmail('');
+    } else {
+      toast({
+        title: "Please enter your email",
+        description: "Email address is required to connect.",
+        variant: "destructive",
+      });
     }
   };
 
@@ -72,7 +78,7 @@ export const Hero = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start">
               <Button 
                 variant="outline" 
                 className="group h-12 px-8 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
@@ -81,16 +87,12 @@ export const Hero = () => {
                 <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 Download Resume
               </Button>
-              <Button variant="ghost" className="h-12 px-8 hover:bg-accent/10 transition-all duration-300">
-                Explore My Work
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
             </div>
           </div>
 
           {/* Tech Stack Pills */}
           <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-            {['Python', 'AI/ML', 'React', 'Computer Vision'].map((tech) => (
+            {['Python', 'AI/ML', 'React', 'Computer Vision', 'Java'].map((tech) => (
               <div key={tech} className="px-3 py-1 bg-secondary/50 backdrop-blur-sm rounded-full text-sm font-medium border border-border/30">
                 {tech}
               </div>

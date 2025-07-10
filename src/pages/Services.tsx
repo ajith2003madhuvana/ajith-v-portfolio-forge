@@ -85,13 +85,6 @@ export default function Services() {
                     </ul>
                   </div>
 
-                  <Button 
-                    variant="outline" 
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -122,24 +115,6 @@ export default function Services() {
             </CardContent>
           </Card>
 
-          {/* Call to Action */}
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl font-bold">
-              Ready to Start Your <span className="gradient-text">Project</span>?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Let's discuss how I can help bring your ideas to life with cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-primary hover:opacity-90 btn-glow">
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button variant="outline">
-                View My Work
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </Layout>

@@ -127,17 +127,6 @@ export default function Projects() {
                         </div>
                       </div>
 
-                      {/* Action Buttons */}
-                      <div className="flex gap-3 pt-4">
-                        <Button className="bg-gradient-primary hover:opacity-90">
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                          View Project
-                        </Button>
-                        <Button variant="outline">
-                          <Github className="mr-2 h-4 w-4" />
-                          Source Code
-                        </Button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -145,38 +134,6 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Additional Projects Teaser */}
-          <Card className="card-metallic text-center">
-            <CardContent className="p-12">
-              <h3 className="text-2xl font-bold mb-4">
-                More Projects Coming Soon
-              </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                I'm constantly working on new and exciting projects. Stay tuned for updates on my latest work in AI, machine learning, and automation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-primary hover:opacity-90">
-                  View All Projects
-                </Button>
-                <Button variant="outline">
-                  Follow My Journey
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Call to Action */}
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl font-bold">
-              Interested in <span className="gradient-text">Collaborating</span>?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              I'm always excited to work on new challenges and innovative solutions. Let's discuss how we can create something amazing together.
-            </p>
-            <Button className="bg-gradient-primary hover:opacity-90 btn-glow">
-              Start a Project
-            </Button>
-          </div>
         </div>
       </div>
     </Layout>

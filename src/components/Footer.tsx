@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const Footer = () => {
@@ -44,13 +44,18 @@ export const Footer = () => {
                 </a>
               </Button>
               <Button variant="outline" size="sm" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/ajith162003/" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={16} />
                 </a>
               </Button>
               <Button variant="outline" size="sm" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/ajith2003madhuvana" target="_blank" rel="noopener noreferrer">
                   <Github size={16} />
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://www.instagram.com/_ajith_v_nair_/" target="_blank" rel="noopener noreferrer">
+                  <Instagram size={16} />
                 </a>
               </Button>
             </div>

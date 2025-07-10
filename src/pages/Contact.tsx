@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Github, Linkedin, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Send, Loader2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 export default function Contact() {
@@ -192,7 +192,7 @@ export default function Contact() {
                   <p className="text-muted-foreground">
                     Follow my journey and connect with me on social platforms
                   </p>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-4">
                     <Button variant="outline" size="lg" asChild>
                       <a href="mailto:ajith2003madhuvana@gmail.com" target="_blank" rel="noopener noreferrer">
                         <Mail className="mr-2 h-5 w-5" />
@@ -200,15 +200,21 @@ export default function Contact() {
                       </a>
                     </Button>
                     <Button variant="outline" size="lg" asChild>
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/ajith162003/" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="mr-2 h-5 w-5" />
                         LinkedIn
                       </a>
                     </Button>
                     <Button variant="outline" size="lg" asChild>
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/ajith2003madhuvana" target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-5 w-5" />
                         GitHub
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="lg" asChild>
+                      <a href="https://www.instagram.com/_ajith_v_nair_/" target="_blank" rel="noopener noreferrer">
+                        <Instagram className="mr-2 h-5 w-5" />
+                        Instagram
                       </a>
                     </Button>
                   </div>
@@ -224,11 +230,11 @@ export default function Contact() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="font-semibold">Available for new projects</span>
+                      <span className="font-semibold">Actively seeking employment opportunities</span>
                     </div>
                     <p className="text-muted-foreground">
-                      I'm currently accepting new opportunities and exciting projects. 
-                      Let's discuss how I can help bring your vision to life.
+                      I'm actively looking for full-time positions in AI/ML, software development, and automation. 
+                      Open to discussing opportunities that align with my technical expertise and career goals.
                     </p>
                     <div className="pt-3">
                       <p className="text-sm text-muted-foreground">
@@ -241,39 +247,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* FAQ Section */}
-          <Card className="card-metallic">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Frequently Asked Questions</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  {
-                    q: "What types of projects do you work on?",
-                    a: "I specialize in AI/ML projects, automation solutions, web applications, and computer vision systems."
-                  },
-                  {
-                    q: "How long does a typical project take?",
-                    a: "Project timelines vary based on complexity, but most projects range from 2-8 weeks."
-                  },
-                  {
-                    q: "Do you provide ongoing support?",
-                    a: "Yes, I offer maintenance and support packages for all delivered projects."
-                  },
-                  {
-                    q: "Can you work with existing teams?",
-                    a: "Absolutely! I collaborate well with existing development teams and stakeholders."
-                  }
-                ].map((faq, index) => (
-                  <div key={index} className="space-y-2">
-                    <h4 className="font-semibold text-primary">{faq.q}</h4>
-                    <p className="text-sm text-muted-foreground">{faq.a}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </Layout>
