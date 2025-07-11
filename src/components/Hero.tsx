@@ -7,13 +7,24 @@ import { toast } from '@/hooks/use-toast';
 export const Hero = () => {
   const [email, setEmail] = useState('');
 
-  const handleConnect = () => {
+  const handleConnect = (e: React.FormEvent) => {
+    e.preventDefault();
     if (email.trim()) {
-      toast({
-        title: "Thanks for connecting!",
-        description: "I'll get back to you soon.",
-      });
-      setEmail('');
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailRegex.test(email.trim())) {
+        toast({
+          title: "Thanks for connecting!",
+          description: "I'll get back to you soon.",
+        });
+        setEmail('');
+      } else {
+        toast({
+          title: "Invalid email format",
+          description: "Please enter a valid email address.",
+          variant: "destructive",
+        });
+      }
     } else {
       toast({
         title: "Please enter your email",
@@ -60,22 +71,23 @@ export const Hero = () => {
           {/* Connect Section with Glassmorphism */}
           <div className="space-y-6">
             <div className="bg-card/50 backdrop-blur-xl border border-border/50 rounded-2xl p-6 shadow-2xl">
-              <div className="flex flex-col sm:flex-row gap-3">
+              <form onSubmit={handleConnect} className="flex flex-col sm:flex-row gap-3">
                 <Input
                   type="email"
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 bg-background/50 border-border/50 backdrop-blur-sm h-12 text-base"
+                  required
                 />
                 <Button 
-                  onClick={handleConnect}
+                  type="submit"
                   className="bg-gradient-primary hover:opacity-90 btn-glow h-12 px-8 font-semibold"
                 >
                   Connect With Me
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </div>
+              </form>
             </div>
             
             <div className="flex justify-center lg:justify-start">
@@ -117,11 +129,11 @@ export const Hero = () => {
               </div>
               
               {/* Floating Card */}
-              <div className="absolute -bottom-6 -right-6 bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-4 shadow-2xl group-hover:scale-105 transition-transform duration-500">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+              <div className="absolute -top-4 -right-8 bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-3 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                   <div>
-                    <p className="text-sm font-semibold">Based in</p>
+                    <p className="text-xs font-semibold">Based in</p>
                     <p className="text-xs text-muted-foreground">Mangaluru, India</p>
                   </div>
                 </div>

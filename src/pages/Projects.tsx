@@ -38,7 +38,7 @@ const projects = [
   {
     title: 'Real-Time Face Detection System',
     description: 'Advanced face detection system with Telegram integration for instant alerts, developed during internship at Lpoint.',
-    image: 'https://images.unsplash.com/photo-1558618047-f4c99ded1a9c?w=400&h=300&fit=crop',
+    image: '/src/assets/face-detection-project.jpg',
     category: 'Computer Vision',
     technologies: ['Python', 'OpenCV', 'Haar Cascade', 'Telegram API', 'Real-time'],
     features: [

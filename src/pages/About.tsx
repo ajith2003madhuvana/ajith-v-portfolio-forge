@@ -20,11 +20,15 @@ export default function About() {
           {/* Bio */}
           <Card className="card-metallic">
             <CardContent className="p-8">
-              <p className="text-lg leading-relaxed text-foreground">
-                Ajith V is a Computer Science and Business Systems undergraduate from Canara Engineering College, Mangaluru. 
-                With a foundation in Python programming, machine learning, and cryptography, he enjoys using code to make an impact. 
-                He is especially drawn to solving practical problems in agriculture, healthcare, and automation through intelligent software.
-              </p>
+              <div className="space-y-6 text-lg leading-relaxed text-foreground">
+                <p>
+                  I'm <span className="font-semibold text-primary">Ajith V</span>, a Computer Science and Business Systems undergraduate at Canara Engineering College, Mangaluru.
+                </p>
+                
+                <p>
+                  With a strong foundation in <span className="font-medium text-accent">Python, Java, machine learning, and cryptography</span>, I enjoy using code to make a real-world impact. I'm passionate about building secure, intelligent systems that combine innovation with practical usability — always focused on delivering solutions that are both technically robust and user-friendly.
+                </p>
+              </div>
             </CardContent>
           </Card>
 
