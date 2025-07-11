@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Brain, Shield, Eye } from 'lucide-react';
+import secureMedImage from '@/assets/securemed-cybersecurity.jpg';
+import faceDetectionImage from '@/assets/face-detection-project.jpg';
 
 const projects = [
   {
@@ -23,7 +25,7 @@ const projects = [
   {
     title: 'SecureMed Platform',
     description: 'Encrypted medical data management system using AES, RSA, and HMAC encryption to ensure patient privacy and data security.',
-    image: '/src/assets/securemed-cybersecurity.jpg',
+    image: secureMedImage,
     category: 'Healthcare Security',
     technologies: ['Python', 'AES', 'RSA', 'HMAC', 'Cryptography'],
     features: [
@@ -38,7 +40,7 @@ const projects = [
   {
     title: 'Real-Time Face Detection System',
     description: 'Advanced face detection system with Telegram integration for instant alerts, developed during internship at Lpoint.',
-    image: '/src/assets/face-detection-project.jpg',
+    image: faceDetectionImage,
     category: 'Computer Vision',
     technologies: ['Python', 'OpenCV', 'Haar Cascade', 'Telegram API', 'Real-time'],
     features: [

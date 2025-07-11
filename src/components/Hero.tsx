@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowRight, Download } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import ajithImage from '@/assets/ajith-professional.jpg';
 
 export const Hero = () => {
   const [email, setEmail] = useState('');
@@ -146,7 +147,7 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary rounded-3xl p-1 group-hover:scale-105 transition-transform duration-500">
                 <div className="w-full h-full rounded-[1.375rem] bg-background/95 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                   <img
-                    src="/src/assets/ajith-professional.jpg"
+                    src={ajithImage}
                     alt="Ajith V"
                     className="w-full h-full object-cover rounded-[1.375rem] group-hover:scale-110 transition-transform duration-700"
                   />
