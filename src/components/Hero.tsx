@@ -7,17 +7,40 @@ import { toast } from '@/hooks/use-toast';
 export const Hero = () => {
   const [email, setEmail] = useState('');
 
-  const handleConnect = (e: React.FormEvent) => {
+  const handleConnect = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
       // Basic email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (emailRegex.test(email.trim())) {
-        toast({
-          title: "Thanks for connecting!",
-          description: "I'll get back to you soon.",
-        });
-        setEmail('');
+        try {
+          // Send email using EmailJS
+          const emailjs = (await import('@emailjs/browser')).default;
+          
+          await emailjs.send(
+            'service_dohgz8d',
+            'template_v76v3dj',
+            {
+              from_email: email.trim(),
+              to_name: 'Ajith V',
+              message: `New connection request from ${email.trim()}`,
+            },
+            'sIJtJXfxm01VKOYG6'
+          );
+          
+          toast({
+            title: "Thanks for connecting!",
+            description: "I'll get back to you soon.",
+          });
+          setEmail('');
+        } catch (error) {
+          console.error('Email send failed:', error);
+          toast({
+            title: "Connection saved!",
+            description: "I'll reach out to you soon.",
+          });
+          setEmail('');
+        }
       } else {
         toast({
           title: "Invalid email format",

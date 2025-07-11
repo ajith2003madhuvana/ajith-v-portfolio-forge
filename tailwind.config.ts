@@ -70,11 +70,19 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-metallic': 'var(--gradient-metallic)'
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-metallic': 'var(--gradient-metallic)',
+				'gradient-glow': 'var(--gradient-glow)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
-				'card': 'var(--shadow-card)'
+				'glow-accent': 'var(--shadow-glow-accent)',
+				'card': 'var(--shadow-card)',
+				'elevated': 'var(--shadow-elevated)'
+			},
+			backdropBlur: {
+				'subtle': 'var(--blur-subtle)',
+				'strong': 'var(--blur-strong)'
 			},
 			fontFamily: {
 				sans: ['Inter', 'ui-sans-serif', 'system-ui']
@@ -105,7 +113,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'gradient-x': 'gradient-x 3s ease infinite'
+				'gradient-x': 'gradient-x 3s ease infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'gradient-shift': 'gradient-shift 4s ease-in-out infinite'
 			}
 		}
 	},

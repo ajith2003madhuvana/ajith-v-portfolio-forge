@@ -8,22 +8,22 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 11% 15%;
+    --background: 218 23% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 210 11% 15%;
+    --card: 218 23% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 210 11% 15%;
+    --popover: 218 23% 8%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 180 100% 50%;
-    --primary-foreground: 210 11% 15%;
+    --primary-foreground: 218 23% 6%;
 
-    --secondary: 210 20% 25%;
+    --secondary: 218 20% 15%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 20% 25%;
+    --muted: 218 20% 15%;
     --muted-foreground: 210 20% 70%;
 
     --accent: 264 83% 57%;
@@ -32,20 +32,26 @@ All colors MUST be HSL.
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 25%;
-    --input: 210 20% 25%;
+    --border: 218 20% 18%;
+    --input: 218 20% 15%;
     --ring: 180 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
-    /* Custom metallic theme colors */
+    /* Enhanced UI/UX Design System */
     --metallic-silver: 210 20% 85%;
-    --metallic-dark: 210 15% 20%;
-    --metallic-darker: 210 15% 12%;
+    --metallic-dark: 218 20% 12%;
+    --metallic-darker: 218 25% 8%;
     --gradient-primary: linear-gradient(135deg, hsl(180 100% 50%), hsl(264 83% 57%));
+    --gradient-secondary: linear-gradient(135deg, hsl(218 23% 8%), hsl(218 20% 15%));
     --gradient-metallic: linear-gradient(135deg, hsl(210 20% 85%), hsl(210 20% 70%));
-    --shadow-glow: 0 0 40px hsl(180 100% 50% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(210 11% 5% / 0.5);
+    --gradient-glow: linear-gradient(135deg, hsl(180 100% 50% / 0.2), hsl(264 83% 57% / 0.2));
+    --shadow-glow: 0 0 40px hsl(180 100% 50% / 0.4);
+    --shadow-glow-accent: 0 0 40px hsl(264 83% 57% / 0.3);
+    --shadow-card: 0 20px 40px -15px hsl(218 25% 3% / 0.8);
+    --shadow-elevated: 0 25px 50px -12px hsl(218 25% 3% / 0.9);
+    --blur-subtle: blur(20px);
+    --blur-strong: blur(40px);
 
     --sidebar-background: 0 0% 98%;
 
@@ -115,7 +121,9 @@ All colors MUST be HSL.
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient-x 3s ease infinite;
   }
   
   .metallic-text {
@@ -123,19 +131,43 @@ All colors MUST be HSL.
   }
   
   .card-metallic {
-    @apply bg-metallic-dark border border-border shadow-card backdrop-blur-sm;
+    @apply bg-gradient-to-br from-card/80 to-metallic-dark/50 border border-border/60 shadow-elevated backdrop-blur-xl;
+  }
+  
+  .card-premium {
+    @apply bg-gradient-to-br from-card/60 to-metallic-darker/80 border border-primary/20 shadow-glow backdrop-blur-xl;
   }
   
   .btn-glow {
-    @apply shadow-glow transition-all duration-300 hover:shadow-glow;
+    @apply shadow-glow transition-all duration-500 hover:shadow-glow-accent hover:scale-105;
+  }
+  
+  .btn-premium {
+    @apply bg-gradient-primary hover:opacity-90 shadow-glow-accent transition-all duration-300 hover:scale-105 hover:shadow-glow;
   }
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-gradient-shift {
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
 
   .hero-decoration {
-    @apply absolute opacity-20 pointer-events-none;
+    @apply absolute opacity-30 pointer-events-none backdrop-blur-sm;
+  }
+  
+  .glass-morphism {
+    @apply bg-card/30 backdrop-blur-xl border border-border/40 shadow-elevated;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
   }
 }
 
@@ -146,8 +178,9 @@ All colors MUST be HSL.
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(2deg); }
+  66% { transform: translateY(-10px) rotate(-2deg); }
 }
 
 @keyframes gradient-x {
@@ -158,5 +191,25 @@ All colors MUST be HSL.
   50% {
     background-size: 200% 200%;
     background-position: right center;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.6);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }

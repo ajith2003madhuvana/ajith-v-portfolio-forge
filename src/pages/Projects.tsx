@@ -23,7 +23,7 @@ const projects = [
   {
     title: 'SecureMed Platform',
     description: 'Encrypted medical data management system using AES, RSA, and HMAC encryption to ensure patient privacy and data security.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop',
+    image: '/src/assets/securemed-cybersecurity.jpg',
     category: 'Healthcare Security',
     technologies: ['Python', 'AES', 'RSA', 'HMAC', 'Cryptography'],
     features: [
