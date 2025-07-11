@@ -69,7 +69,7 @@ export default function Contact() {
               Get In <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to bring your ideas to life? Let's discuss your project and explore possibilities together.
+              I'm open to software development opportunities where I can learn, contribute, and grow. Feel free to reach out—I'd be happy to connect.
             </p>
           </div>
 

@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -18,14 +19,15 @@ export const Hero = () => {
           const emailjs = (await import('@emailjs/browser')).default;
           
           await emailjs.send(
-            'service_dohgz8d',
-            'template_v76v3dj',
+            'service_t67bies',
+            'template_p2aqzsq',
             {
+              from_name: 'Website Visitor',
               from_email: email.trim(),
-              to_name: 'Ajith V',
-              message: `New connection request from ${email.trim()}`,
+              message: `Someone wants to connect with you! Email: ${email.trim()}`,
+              to_name: 'Ajith V'
             },
-            'sIJtJXfxm01VKOYG6'
+            'htcPdoA1XeuTfpgYj'
           );
           
           toast({
@@ -151,8 +153,8 @@ export const Hero = () => {
                 </div>
               </div>
               
-              {/* Floating Card */}
-              <div className="absolute -top-4 -right-8 bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-3 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+              {/* Floating Card - Repositioned to right shoulder area */}
+              <div className="absolute -top-2 -right-4 bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-3 shadow-2xl group-hover:scale-105 transition-transform duration-500 z-10">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                   <div>
