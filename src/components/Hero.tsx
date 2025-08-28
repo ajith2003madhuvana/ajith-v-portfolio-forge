@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, ExternalLink } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import ajithImage from '@/assets/ajith-professional.jpg';
 
@@ -116,14 +116,34 @@ export const Hero = () => {
               </form>
             </div>
             
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start gap-3">
               <Button 
                 variant="outline" 
+                asChild
                 className="group h-12 px-8 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1ebxi5_1xUmknHymEQAjT34IgDJFOqv6N', '_blank')}
               >
-                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Download Resume
+                <a 
+                  href="https://drive.google.com/file/d/1ebxi5_1xUmknHymEQAjT34IgDJFOqv6N/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                  Download Resume
+                </a>
+              </Button>
+              <Button 
+                asChild 
+                className="h-12 px-8 bg-gradient-primary hover:opacity-90 btn-glow"
+              >
+                <a 
+                  href="https://ajith2003madhuvana.github.io/Cryptography_SecureMed_Project/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <ExternalLink className="mr-2 h-5 w-5" />
+                  View SecureMed Live
+                </a>
               </Button>
             </div>
           </div>
