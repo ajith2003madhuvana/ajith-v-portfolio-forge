@@ -116,24 +116,24 @@ export const Hero = () => {
               </form>
             </div>
             
-            <div className="flex justify-center lg:justify-start gap-3">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
               <Button 
                 variant="outline" 
                 asChild
-                className="group h-12 px-8 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                className="group h-12 px-6 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
               >
                 <a 
                   href="https://drive.google.com/file/d/1ebxi5_1xUmknHymEQAjT34IgDJFOqv6N/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                  <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                   Download Resume
                 </a>
               </Button>
               <Button 
                 asChild 
-                className="h-12 px-8 bg-gradient-primary hover:opacity-90 btn-glow"
+                className="h-12 px-6 bg-gradient-primary hover:opacity-90 btn-glow"
               >
                 <a 
                   href="https://ajith2003madhuvana.github.io/Cryptography_SecureMed_Project/"
@@ -141,8 +141,8 @@ export const Hero = () => {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <ExternalLink className="mr-2 h-5 w-5" />
-                  View SecureMed Live
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  View Live Demo
                 </a>
               </Button>
             </div>
