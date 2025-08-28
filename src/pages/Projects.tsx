@@ -8,49 +8,58 @@ import faceDetectionImage from '@/assets/face-detection-project.jpg';
 
 const projects = [
   {
-    title: 'AI-Enabled Leaf Disease Detection',
-    description: 'CNN-based system for early detection of plant diseases in agriculture, helping farmers identify and treat crop issues before they spread.',
+    title: 'AI-Enabled Leaf Disease Detection and Classification for Smart Agriculture',
+    description: 'Deep learning system using CNN for accurate detection and classification of leaf diseases to enhance crop health monitoring and improve agricultural decision-making in smart farming.',
     image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400&h=300&fit=crop',
-    category: 'Agriculture AI',
-    technologies: ['Python', 'CNN', 'TensorFlow', 'OpenCV', 'Agriculture'],
+    category: 'Agricultural AI',
+    technologies: ['Python', 'Deep Learning', 'CNN', 'TensorFlow', 'Computer Vision', 'Smart Agriculture', 'Image Classification'],
     features: [
-      'Real-time leaf analysis',
-      'Disease classification with 95% accuracy',
-      'Mobile-friendly interface',
-      'Treatment recommendations'
+      'AI-driven leaf disease detection with high accuracy',
+      'Real-time crop health monitoring system',
+      'Classification of multiple disease types',
+      'Smart agriculture decision support',
+      'Enhanced agricultural productivity tools'
     ],
     icon: Brain,
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500',
+    liveUrl: '',
+    githubUrl: ''
   },
   {
-    title: 'SecureMed Platform',
-    description: 'Encrypted medical data management system using AES, RSA, and HMAC encryption to ensure patient privacy and data security.',
+    title: 'SecureMed: Crypto-Powered AI Platform for Healthcare Data Management',
+    description: 'Secure web platform integrating AES, RSA, and HMAC encryption to ensure confidentiality, integrity, and authenticity of healthcare data for safe medical record storage and sharing.',
     image: secureMedImage,
-    category: 'Healthcare Security',
-    technologies: ['Python', 'AES', 'RSA', 'HMAC', 'Cryptography'],
+    category: 'Healthcare Cybersecurity',
+    technologies: ['Cryptography', 'AES Encryption', 'RSA Encryption', 'HMAC', 'Healthcare Data Security', 'Web Development', 'Data Privacy'],
     features: [
-      'Multi-layer encryption',
-      'Secure data transmission',
-      'Access control management',
-      'Audit trail logging'
+      'Multi-layer encryption (AES, RSA, HMAC)',
+      'Secure patient data storage and sharing',
+      'Healthcare data confidentiality assurance',
+      'Medical record integrity verification',
+      'Crypto-powered authentication system'
     ],
     icon: Shield,
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500',
+    liveUrl: 'https://ajith2003madhuvana.github.io/Cryptography_SecureMed_Project/',
+    githubUrl: ''
   },
   {
-    title: 'Real-Time Face Detection System',
-    description: 'Advanced face detection system with Telegram integration for instant alerts, developed during internship at Lpoint.',
+    title: 'Real-Time Face Detection System with Telegram Integration',
+    description: 'Advanced computer vision system using OpenCV for real-time face detection with instant Telegram alert notifications, developed during ML internship at Lpoint.',
     image: faceDetectionImage,
-    category: 'Computer Vision',
-    technologies: ['Python', 'OpenCV', 'Haar Cascade', 'Telegram API', 'Real-time'],
+    category: 'Computer Vision & Machine Learning',
+    technologies: ['Python', 'OpenCV', 'Computer Vision', 'Telegram API', 'Real-time Processing', 'Machine Learning', 'Notification System'],
     features: [
-      'Real-time face detection',
-      'Instant Telegram notifications',
-      'Multiple face tracking',
-      'Performance optimization'
+      'Real-time face detection using OpenCV',
+      'Instant Telegram alert integration',
+      'Multiple face tracking capabilities',
+      'Performance-optimized processing',
+      'Automated notification system'
     ],
     icon: Eye,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500',
+    liveUrl: '',
+    githubUrl: ''
   }
 ];
 
@@ -128,6 +137,38 @@ export default function Projects() {
                           ))}
                         </div>
                       </div>
+
+                      {/* Project Links */}
+                      {(project.liveUrl || project.githubUrl) && (
+                        <div className="flex gap-4 pt-4">
+                          {project.liveUrl && (
+                            <Button asChild variant="default" size="sm">
+                              <a 
+                                href={project.liveUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2"
+                              >
+                                <ExternalLink size={16} />
+                                Live Demo
+                              </a>
+                            </Button>
+                          )}
+                          {project.githubUrl && (
+                            <Button asChild variant="outline" size="sm">
+                              <a 
+                                href={project.githubUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2"
+                              >
+                                <Github size={16} />
+                                Source Code
+                              </a>
+                            </Button>
+                          )}
+                        </div>
+                      )}
 
                     </div>
                   </div>

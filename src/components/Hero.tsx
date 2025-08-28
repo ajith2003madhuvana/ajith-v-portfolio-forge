@@ -79,7 +79,7 @@ export const Hero = () => {
           {/* Status Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
-            <span className="text-sm font-medium text-primary">Available for new opportunities</span>
+            <span className="text-sm font-medium text-primary">Currently: Java Developer Intern at AP Academy</span>
           </div>
 
           <div className="space-y-6">
@@ -90,7 +90,7 @@ export const Hero = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              I'm a CSBS graduate passionate about AI/ML, automation, and building meaningful solutions that scale across industries.
+              Computer Science and Business Systems graduate with expertise in Java development, machine learning, and cybersecurity. Currently interning at AP Academy, passionate about creating intelligent systems and secure applications.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export const Hero = () => {
               <Button 
                 variant="outline" 
                 className="group h-12 px-8 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1MAHynlV739IoH10I3qbsAjvHaIbZfdXp', '_blank')}
+                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1ebxi5_1xUmknHymEQAjT34IgDJFOqv6N', '_blank')}
               >
                 <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 Download Resume
@@ -130,7 +130,7 @@ export const Hero = () => {
 
           {/* Tech Stack Pills */}
           <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-            {['Python', 'AI/ML', 'React', 'Computer Vision', 'Java'].map((tech) => (
+            {['Java', 'Python', 'Machine Learning', 'Spring Boot', 'Cybersecurity', 'SQL', 'Azure'].map((tech) => (
               <div key={tech} className="px-3 py-1 bg-secondary/50 backdrop-blur-sm rounded-full text-sm font-medium border border-border/30">
                 {tech}
               </div>

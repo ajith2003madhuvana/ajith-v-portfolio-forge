@@ -9,60 +9,89 @@ const skillCategories = [
     title: 'Programming Languages',
     icon: Code,
     skills: [
-      { name: 'Python', level: 90 },
-      { name: 'C', level: 80 },
-      { name: 'Java', level: 75 },
-      { name: 'JavaScript', level: 70 }
+      { name: 'Java', level: 90 },
+      { name: 'Python', level: 88 },
+      { name: 'C', level: 85 },
+      { name: 'JavaScript', level: 75 },
+      { name: 'SQL', level: 85 }
     ]
   },
   {
-    title: 'Web Technologies',
+    title: 'Backend Development',
     icon: Database,
     skills: [
-      { name: 'HTML/CSS', level: 85 },
-      { name: 'Streamlit', level: 80 },
-      { name: 'Responsive Design', level: 75 }
+      { name: 'Spring Boot', level: 85 },
+      { name: 'MySQL', level: 80 },
+      { name: 'SQLite', level: 78 },
+      { name: 'Data Structures & Algorithms', level: 88 },
+      { name: 'Backend Architecture', level: 82 }
     ]
   },
   {
-    title: 'ML & Data Science',
-    icon: Brain,
-    skills: [
-      { name: 'KNN Algorithm', level: 85 },
-      { name: 'Pandas', level: 80 },
-      { name: 'NumPy', level: 80 },
-      { name: 'Matplotlib', level: 75 },
-      { name: 'Seaborn', level: 75 }
-    ]
-  },
-  {
-    title: 'Computer Vision & Security',
-    icon: Shield,
-    skills: [
-      { name: 'OpenCV', level: 80 },
-      { name: 'Haar Cascade', level: 75 },
-      { name: 'AES Encryption', level: 70 },
-      { name: 'RSA', level: 70 },
-      { name: 'HMAC', level: 65 }
-    ]
-  },
-  {
-    title: 'Tools & Platforms',
+    title: 'Web Development',
     icon: Wrench,
     skills: [
-      { name: 'Git/GitHub', level: 85 },
-      { name: 'VS Code', level: 90 },
-      { name: 'Jupyter Notebook', level: 80 }
+      { name: 'HTML', level: 90 },
+      { name: 'CSS', level: 88 },
+      { name: 'JavaScript', level: 75 },
+      { name: 'Streamlit', level: 85 },
+      { name: 'Responsive Design', level: 80 }
+    ]
+  },
+  {
+    title: 'Machine Learning & AI',
+    icon: Brain,
+    skills: [
+      { name: 'Machine Learning', level: 88 },
+      { name: 'KNN Algorithm', level: 85 },
+      { name: 'Deep Learning (CNN)', level: 80 },
+      { name: 'Computer Vision', level: 85 },
+      { name: 'Data Analysis', level: 88 }
+    ]
+  },
+  {
+    title: 'Data Science & Visualization',
+    icon: Database,
+    skills: [
+      { name: 'Pandas', level: 85 },
+      { name: 'NumPy', level: 85 },
+      { name: 'Matplotlib', level: 80 },
+      { name: 'Seaborn', level: 80 },
+      { name: 'Data Preprocessing', level: 88 }
+    ]
+  },
+  {
+    title: 'Cybersecurity & Cryptography',
+    icon: Shield,
+    skills: [
+      { name: 'Cryptography', level: 85 },
+      { name: 'AES Encryption', level: 80 },
+      { name: 'RSA Encryption', level: 80 },
+      { name: 'HMAC', level: 78 },
+      { name: 'Data Security', level: 85 }
+    ]
+  },
+  {
+    title: 'Cloud & Tools',
+    icon: Wrench,
+    skills: [
+      { name: 'Microsoft Azure', level: 75 },
+      { name: 'Git/GitHub', level: 90 },
+      { name: 'OpenCV', level: 85 },
+      { name: 'Telegram API', level: 80 },
+      { name: 'Prompt Engineering', level: 75 }
     ]
   },
   {
     title: 'Soft Skills',
     icon: Users,
     skills: [
+      { name: 'Analytical Thinking', level: 90 },
+      { name: 'Problem Solving', level: 88 },
       { name: 'Communication', level: 85 },
-      { name: 'Teamwork', level: 90 },
-      { name: 'Logical Thinking', level: 88 },
-      { name: 'Problem Solving', level: 85 }
+      { name: 'Team Collaboration', level: 88 },
+      { name: 'Time Management', level: 85 },
+      { name: 'Adaptability', level: 90 }
     ]
   }
 ];
@@ -117,12 +146,12 @@ export default function Skills() {
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-3 justify-center">
-                {[
-                  'Python', 'C', 'Java', 'JavaScript', 'HTML/CSS', 'Streamlit',
-                  'OpenCV', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Git',
-                  'GitHub', 'VS Code', 'Jupyter', 'Machine Learning', 'Computer Vision',
-                  'Cryptography', 'Data Analysis', 'Web Development'
-                ].map((tech) => (
+            {[
+              'Java', 'Spring Boot', 'Python', 'Machine Learning', 'SQL', 'MySQL', 
+              'Cybersecurity', 'AES Encryption', 'RSA Encryption', 'OpenCV', 'Computer Vision',
+              'Streamlit', 'Data Science', 'Pandas', 'NumPy', 'Microsoft Azure', 
+              'Git', 'GitHub', 'Deep Learning', 'CNN', 'Healthcare Technology'
+            ].map((tech) => (
                   <Badge 
                     key={tech} 
                     variant="secondary" 

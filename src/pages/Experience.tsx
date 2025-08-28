@@ -5,32 +5,47 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'Python & ML Intern',
+    title: 'Java Developer Intern',
+    company: 'AP Academy',
+    location: 'Bengaluru',
+    period: 'June 2025 – Present',
+    type: 'Internship',
+    achievements: [
+      'Developing skills in Java, SQL, and fundamental software development concepts',
+      'Learning data structures and algorithms for efficient programming',
+      'Engaged in practical training to build reliable and efficient backend applications',
+      'Gaining hands-on experience in software development lifecycle'
+    ],
+    technologies: ['Java', 'SQL', 'Data Structures', 'Algorithms', 'Backend Development']
+  },
+  {
+    title: 'Python & Machine Learning Intern',
     company: 'Lpoint',
     location: 'Mangaluru',
     period: 'Feb 2025 – May 2025',
     type: 'Internship',
     achievements: [
-      'Built face recognition system with Telegram alert integration',
-      'Developed ML models for crop and diabetes prediction',
-      'Created interactive dashboards using Streamlit',
-      'Implemented real-time data processing pipelines'
+      'Developed real-time face detection system using OpenCV with Telegram integration',
+      'Built KNN machine learning models for crop recommendation and diabetes prediction',
+      'Created interactive Streamlit web applications for data visualization',
+      'Managed end-to-end data processes including preprocessing, analysis, and SQL querying',
+      'Implemented matrix operations and visualization with Matplotlib and Seaborn'
     ],
-    technologies: ['Python', 'Machine Learning', 'Streamlit', 'OpenCV', 'Telegram API']
+    technologies: ['Python', 'Machine Learning', 'OpenCV', 'Streamlit', 'KNN', 'Telegram API', 'Matplotlib', 'Seaborn', 'SQL']
   },
   {
     title: 'C Programming Trainee',
     company: 'QSpiders',
     location: 'Training Institute',
-    period: 'June 2024 – July 2024',
+    period: 'Oct 2023 – Nov 2023',
     type: 'Training',
     achievements: [
-      'Gained proficiency in core C programming concepts',
-      'Mastered data structures and algorithms',
-      'Implemented various sorting and searching algorithms',
-      'Developed problem-solving skills through coding exercises'
+      'Gained practical experience in C programming and core data structures',
+      'Enhanced problem-solving and analytical skills via hands-on coding challenges',
+      'Developed soft skills including communication, teamwork, and presentation abilities',
+      'Mastered fundamental programming concepts and algorithm implementation'
     ],
-    technologies: ['C Programming', 'Data Structures', 'Algorithms', 'Problem Solving']
+    technologies: ['C Programming', 'Data Structures', 'Algorithms', 'Problem Solving', 'Communication Skills']
   }
 ];
 
