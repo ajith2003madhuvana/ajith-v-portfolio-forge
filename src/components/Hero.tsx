@@ -77,9 +77,15 @@ export const Hero = () => {
         {/* Content */}
         <div className="space-y-8 text-center lg:text-left">
           {/* Status Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
-            <span className="text-sm font-medium text-primary">Currently: Java Developer Intern at AP Academy</span>
+          <div className="flex flex-col sm:flex-row gap-3 items-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
+              <span className="text-sm font-medium text-primary">Currently: Java Developer Intern at TAP Academy</span>
+            </div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm">
+              <div className="w-2 h-2 bg-accent rounded-full animate-pulse mr-2"></div>
+              <span className="text-sm font-medium text-accent">Open to New Opportunities</span>
+            </div>
           </div>
 
           <div className="space-y-6">
