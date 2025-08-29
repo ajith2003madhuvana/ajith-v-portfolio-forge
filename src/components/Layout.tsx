@@ -7,9 +7,9 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-hero text-foreground antialiased">
       <Navigation />
-      <main>{children}</main>
+      <main className="relative z-0">{children}</main>
       <Footer />
     </div>
   );

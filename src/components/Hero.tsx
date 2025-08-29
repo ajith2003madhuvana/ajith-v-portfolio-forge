@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -61,85 +60,90 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/80"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,hsl(var(--primary)/0.1),transparent_70%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,hsl(var(--accent)/0.1),transparent_70%)]"></div>
+    <section className="min-h-screen flex items-center justify-center pt-20 section-professional relative overflow-hidden bg-gradient-hero">
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 bg-gradient-glow opacity-40"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.12),transparent_60%)]"></div>
       
-      {/* Floating Decorative Elements */}
-      <div className="hero-decoration top-20 left-10 w-16 h-16 border-2 border-primary/30 rotate-45 animate-float backdrop-blur-sm bg-primary/5 rounded-lg"></div>
-      <div className="hero-decoration top-40 right-20 w-12 h-12 border-2 border-accent/30 rotate-12 animate-float backdrop-blur-sm bg-accent/5 rounded-lg" style={{ animationDelay: '2s' }}></div>
-      <div className="hero-decoration bottom-32 left-20 w-20 h-20 border-2 border-primary/20 rotate-45 animate-float backdrop-blur-sm bg-primary/3 rounded-lg" style={{ animationDelay: '4s' }}></div>
-      <div className="hero-decoration top-32 right-40 w-8 h-8 border border-accent/40 rotate-45 animate-float backdrop-blur-sm bg-accent/10 rounded-md" style={{ animationDelay: '6s' }}></div>
+      {/* Professional Floating Decorations */}
+      <div className="decoration-float top-24 left-12 w-20 h-20 border border-primary/20 rounded-2xl bg-gradient-primary/5 backdrop-blur-sm" style={{ animationDelay: '0s' }}></div>
+      <div className="decoration-float top-48 right-16 w-14 h-14 border border-accent/25 rounded-xl bg-gradient-primary/10 backdrop-blur-sm" style={{ animationDelay: '2s' }}></div>
+      <div className="decoration-float bottom-40 left-24 w-24 h-24 border border-primary/15 rounded-3xl bg-accent/5 backdrop-blur-sm" style={{ animationDelay: '4s' }}></div>
+      <div className="decoration-float top-36 right-32 w-10 h-10 border border-accent/30 rounded-lg bg-primary/10 backdrop-blur-sm" style={{ animationDelay: '6s' }}></div>
       
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-        {/* Content */}
-        <div className="space-y-8 text-center lg:text-left">
-          {/* Status Badge */}
-          <div className="flex flex-col sm:flex-row gap-3 items-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
-              <span className="text-sm font-medium text-primary">Currently: Java Developer Intern at TAP Academy</span>
+      <div className="container-professional grid-feature relative z-10">
+        {/* Enhanced Content */}
+        <div className="space-y-10 text-center lg:text-left animate-fade-in">
+          {/* Professional Status Badges */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
+            <div className="card-glass px-5 py-3 rounded-full">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-primary rounded-full animate-glow"></div>
+                <span className="text-sm font-semibold text-primary">Java Developer Intern at TAP Academy</span>
+              </div>
             </div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse mr-2"></div>
-              <span className="text-sm font-medium text-accent">Open to New Opportunities</span>
+            <div className="card-glass px-5 py-3 rounded-full">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-accent rounded-full animate-pulse-professional"></div>
+                <span className="text-sm font-semibold text-accent">Open to Opportunities</span>
+              </div>
             </div>
           </div>
 
-          <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
-              Turning Ideas into{' '}
-              <span className="gradient-text bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">
-                Intelligent Systems
+          <div className="space-y-8">
+            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold leading-tight tracking-tight text-professional">
+              Crafting{' '}
+              <span className="gradient-text block lg:inline">
+                Intelligent Solutions
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Computer Science and Business Systems graduate with expertise in Java development, machine learning, and cybersecurity. Currently interning at AP Academy, passionate about creating intelligent systems and secure applications.
+            <p className="text-xl lg:text-2xl text-text-medium max-w-3xl leading-relaxed font-medium">
+              Computer Science graduate specializing in Java development, machine learning, and cybersecurity. 
+              Building secure, intelligent systems that solve real-world problems.
             </p>
           </div>
 
-          {/* Connect Section with Glassmorphism */}
-          <div className="space-y-6">
-            <div className="bg-card/50 backdrop-blur-xl border border-border/50 rounded-2xl p-6 shadow-2xl">
-              <form onSubmit={handleConnect} className="flex flex-col sm:flex-row gap-3">
+          {/* Professional Connect Section */}
+          <div className="space-y-8">
+            <div className="card-premium p-8 max-w-2xl mx-auto lg:mx-0">
+              <form onSubmit={handleConnect} className="space-y-4 sm:space-y-0 sm:flex sm:gap-4">
                 <Input
                   type="email"
-                  placeholder="Enter your email address"
+                  placeholder="Enter your professional email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-background/50 border-border/50 backdrop-blur-sm h-12 text-base"
+                  className="flex-1 bg-surface/50 border-border/50 backdrop-blur-sm h-14 text-lg rounded-xl font-medium"
                   required
                 />
                 <Button 
                   type="submit"
-                  className="bg-gradient-primary hover:opacity-90 btn-glow h-12 px-8 font-semibold"
+                  className="btn-primary h-14 px-8 text-lg whitespace-nowrap"
                 >
-                  Connect With Me
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Let's Connect
+                  <ArrowRight className="ml-3 h-6 w-6" />
                 </Button>
               </form>
             </div>
             
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
               <Button 
                 variant="outline" 
                 asChild
-                className="group h-12 px-6 bg-background/50 backdrop-blur-sm border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                className="btn-ghost group h-14 px-8 text-lg"
               >
                 <a 
                   href="https://drive.google.com/file/d/1ebxi5_1xUmknHymEQAjT34IgDJFOqv6N/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                  <Download className="mr-3 h-5 w-5 group-hover:animate-bounce" />
                   Download Resume
                 </a>
               </Button>
               <Button 
                 asChild 
-                className="h-12 px-6 bg-gradient-primary hover:opacity-90 btn-glow"
+                className="btn-primary h-14 px-8 text-lg"
               >
                 <a 
                   href="https://ajith2003madhuvana.github.io/Cryptography_SecureMed_Project/"
@@ -147,53 +151,56 @@ export const Hero = () => {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <ExternalLink className="mr-2 h-4 w-4" />
+                  <ExternalLink className="mr-3 h-5 w-5" />
                   View Live Demo
                 </a>
               </Button>
             </div>
           </div>
 
-          {/* Tech Stack Pills */}
-          <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-            {['Java', 'Python', 'Machine Learning', 'Spring Boot', 'Cybersecurity', 'SQL', 'Azure'].map((tech) => (
-              <div key={tech} className="px-3 py-1 bg-secondary/50 backdrop-blur-sm rounded-full text-sm font-medium border border-border/30">
-                {tech}
-              </div>
-            ))}
+          {/* Enhanced Tech Stack */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-text-medium text-center lg:text-left">Core Technologies</h3>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+              {['Java', 'Python', 'Machine Learning', 'Spring Boot', 'Cybersecurity', 'SQL', 'Azure'].map((tech) => (
+                <div key={tech} className="card-glass px-4 py-2 rounded-xl text-sm font-semibold border border-border/30 hover:border-primary/40 transition-all duration-300 hover:scale-105">
+                  {tech}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Enhanced Profile Image */}
-        <div className="flex justify-center lg:justify-end">
+        {/* Professional Profile Image Section */}
+        <div className="flex justify-center lg:justify-end animate-slide-up">
           <div className="relative group">
             {/* Main Image Container */}
             <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-              {/* Gradient Border */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary rounded-3xl p-1 group-hover:scale-105 transition-transform duration-500">
-                <div className="w-full h-full rounded-[1.375rem] bg-background/95 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+              {/* Enhanced Gradient Border */}
+              <div className="absolute inset-0 bg-gradient-primary rounded-3xl p-1.5 group-hover:scale-105 transition-all duration-700 shadow-elevated">
+                <div className="w-full h-full rounded-[1.5rem] bg-surface-elevated/95 backdrop-blur-md flex items-center justify-center overflow-hidden">
                   <img
                     src={ajithImage}
-                    alt="Ajith V"
-                    className="w-full h-full object-cover rounded-[1.375rem] group-hover:scale-110 transition-transform duration-700"
+                    alt="Ajith V - Software Developer"
+                    className="w-full h-full object-cover rounded-[1.5rem] group-hover:scale-110 transition-transform duration-1000"
                   />
                 </div>
               </div>
               
-              {/* Floating Card - Repositioned to right shoulder area */}
-              <div className="absolute -top-2 -right-4 bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-3 shadow-2xl group-hover:scale-105 transition-transform duration-500 z-10">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              {/* Professional Info Card */}
+              <div className="absolute -top-4 -right-6 card-premium p-4 shadow-xl group-hover:scale-105 transition-all duration-700 z-10 animate-float">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-glow"></div>
                   <div>
-                    <p className="text-xs font-semibold">Based in</p>
-                    <p className="text-xs text-muted-foreground">Mangaluru, India</p>
+                    <p className="text-sm font-bold text-text-high">Based in</p>
+                    <p className="text-xs text-text-medium font-medium">Mangaluru, India</p>
                   </div>
                 </div>
               </div>
               
-              {/* Glow Effects */}
-              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-primary/30 blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
-              <div className="absolute -z-20 inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 blur-[100px] opacity-30"></div>
+              {/* Enhanced Glow Effects */}
+              <div className="absolute -z-10 inset-0 bg-gradient-primary/20 blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700 rounded-full"></div>
+              <div className="absolute -z-20 inset-0 bg-gradient-primary/10 blur-[120px] opacity-40 rounded-full"></div>
             </div>
           </div>
         </div>

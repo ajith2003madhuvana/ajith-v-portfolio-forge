@@ -62,30 +62,50 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				metallic: {
-					silver: 'hsl(var(--metallic-silver))',
-					dark: 'hsl(var(--metallic-dark))',
-					darker: 'hsl(var(--metallic-darker))'
+				surface: {
+					DEFAULT: 'hsl(var(--surface))',
+					elevated: 'hsl(var(--surface-elevated))',
+					overlay: 'hsl(var(--surface-overlay))'
+				},
+				text: {
+					high: 'hsl(var(--text-high))',
+					medium: 'hsl(var(--text-medium))',
+					low: 'hsl(var(--text-low))'
+				},
+				glass: {
+					bg: 'var(--glass-bg)',
+					border: 'var(--glass-border)'
 				}
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-metallic': 'var(--gradient-metallic)',
-				'gradient-glow': 'var(--gradient-glow)'
+				'gradient-surface': 'var(--gradient-surface)',
+				'gradient-overlay': 'var(--gradient-overlay)',
+				'gradient-glow': 'var(--gradient-glow)',
+				'gradient-hero': 'var(--gradient-hero)'
 			},
 			boxShadow: {
+				'sm': 'var(--shadow-sm)',
+				'md': 'var(--shadow-md)',
+				'lg': 'var(--shadow-lg)',
+				'xl': 'var(--shadow-xl)',
 				'glow': 'var(--shadow-glow)',
 				'glow-accent': 'var(--shadow-glow-accent)',
-				'card': 'var(--shadow-card)',
 				'elevated': 'var(--shadow-elevated)'
 			},
 			backdropBlur: {
-				'subtle': 'var(--blur-subtle)',
-				'strong': 'var(--blur-strong)'
+				'xs': 'var(--blur-xs)',
+				'sm': 'var(--blur-sm)',
+				'md': 'var(--blur-md)',
+				'lg': 'var(--blur-lg)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'ui-sans-serif', 'system-ui']
+				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+			},
+			spacing: {
+				'18': '4.5rem',
+				'88': '22rem',
+				'128': '32rem'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -113,9 +133,12 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'gradient-x': 'gradient-x 3s ease infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-				'gradient-shift': 'gradient-shift 4s ease-in-out infinite'
+				'fade-in': 'fadeIn 0.6s ease-out forwards',
+				'slide-up': 'slideUp 0.8s ease-out forwards',
+				'float': 'float 6s ease-in-out infinite',
+				'gradient-flow': 'gradient-flow 4s ease infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'pulse-professional': 'pulse-professional 2s ease-in-out infinite'
 			}
 		}
 	},
