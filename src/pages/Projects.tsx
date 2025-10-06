@@ -2,7 +2,7 @@ import { Layout } from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Brain, Shield, Eye } from 'lucide-react';
+import { ExternalLink, Github, Brain, Shield, Eye, Film } from 'lucide-react';
 import secureMedImage from '@/assets/securemed-cybersecurity.jpg';
 import faceDetectionImage from '@/assets/face-detection-project.jpg';
 
@@ -59,6 +59,25 @@ const projects = [
     icon: Eye,
     color: 'from-purple-500 to-pink-500',
     liveUrl: '',
+    githubUrl: ''
+  },
+  {
+    title: 'CineReview: Movie Review & Rating Platform',
+    description: 'Interactive movie discovery platform with real-time TMDB API integration, allowing users to search, rate, and review movies with persistent storage for favorites and review history.',
+    image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=300&fit=crop',
+    category: 'Web Development',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'TMDB API', 'LocalStorage', 'Responsive Design', 'REST API'],
+    features: [
+      'Real-time movie search with TMDB integration',
+      'Genre-based filtering and quick filters',
+      'Star rating system with visual feedback',
+      'User review management (add/edit/delete)',
+      'Favorites and history tracking with LocalStorage',
+      'Responsive dark metallic theme design'
+    ],
+    icon: Film,
+    color: 'from-yellow-500 to-orange-500',
+    liveUrl: 'https://ajith2003madhuvana.github.io/CineReview-Movie-App/',
     githubUrl: ''
   }
 ];

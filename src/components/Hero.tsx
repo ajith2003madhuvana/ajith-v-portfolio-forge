@@ -133,7 +133,7 @@ export const Hero = () => {
                 className="btn-ghost group h-14 px-8 text-lg"
               >
                 <a 
-                  href="https://drive.google.com/file/d/1ebxi5_1xUmknHymEQAjT34IgDJFOqv6N/view?usp=sharing"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
