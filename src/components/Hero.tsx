@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ArrowRight, Download, ExternalLink } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import ajithImage from '@/assets/ajith-professional.jpg';
 
@@ -126,33 +126,19 @@ export const Hero = () => {
               </form>
             </div>
             
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <div className="flex justify-center lg:justify-start">
               <Button 
                 variant="outline" 
                 asChild
                 className="btn-ghost group h-14 px-8 text-lg"
               >
                 <a 
-                  href="/resume.pdf"
+                  href="https://drive.google.com/file/d/1EsioiRUzyusNX4nOWlPVbrLMJ4pl6tFO/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Download className="mr-3 h-5 w-5 group-hover:animate-bounce" />
                   Download Resume
-                </a>
-              </Button>
-              <Button 
-                asChild 
-                className="btn-primary h-14 px-8 text-lg"
-              >
-                <a 
-                  href="https://ajith2003madhuvana.github.io/Cryptography_SecureMed_Project/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center"
-                >
-                  <ExternalLink className="mr-3 h-5 w-5" />
-                  View Live Demo
                 </a>
               </Button>
             </div>
