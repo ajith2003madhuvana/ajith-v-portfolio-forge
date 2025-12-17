@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { Code, Database, Brain, Shield, Wrench, Users } from 'lucide-react';
+import { Code, Database, Brain, Shield } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const skillCategories = [
   {
@@ -51,8 +52,14 @@ const skillCategories = [
 ];
 
 export const SkillsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section 
+      id="skills" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 px-4 sm:px-6 lg:px-8 scroll-animate ${isVisible ? 'visible' : ''}`}
+    >
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center space-y-4">

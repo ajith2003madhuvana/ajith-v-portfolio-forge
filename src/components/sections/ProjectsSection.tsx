@@ -2,6 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Brain, Shield, Eye, Film } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import secureMedImage from '@/assets/securemed-cybersecurity.jpg';
 import faceDetectionImage from '@/assets/face-detection-project.jpg';
 
@@ -82,8 +83,14 @@ const projects = [
 ];
 
 export const ProjectsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section 
+      id="projects" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 px-4 sm:px-6 lg:px-8 scroll-animate ${isVisible ? 'visible' : ''}`}
+    >
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center space-y-4">

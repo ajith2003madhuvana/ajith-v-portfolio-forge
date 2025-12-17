@@ -7,8 +7,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Send, Loader2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const ContactSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -59,7 +61,11 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-surface/30">
+    <section 
+      id="contact" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 px-4 sm:px-6 lg:px-8 bg-surface/30 scroll-animate ${isVisible ? 'visible' : ''}`}
+    >
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center space-y-4">
