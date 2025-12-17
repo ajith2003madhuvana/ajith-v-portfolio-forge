@@ -67,7 +67,7 @@ export const SkillsSection = () => {
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="card-metallic hover:shadow-glow transition-all duration-300">
+            <Card key={index} className="card-glass hover:shadow-glow transition-all duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <category.icon className="text-primary" size={24} />
@@ -93,7 +93,7 @@ export const SkillsSection = () => {
         </div>
 
         {/* Technologies as Badges */}
-        <Card className="card-metallic">
+        <Card className="card-glass">
           <CardHeader>
             <CardTitle className="text-center">Technology Stack</CardTitle>
           </CardHeader>

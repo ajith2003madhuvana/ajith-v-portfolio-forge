@@ -98,7 +98,7 @@ export const ProjectsSection = () => {
         {/* Projects Grid */}
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <Card key={index} className="card-metallic hover:shadow-glow transition-all duration-300 overflow-hidden">
+            <Card key={index} className="card-glass hover:shadow-glow transition-all duration-300 overflow-hidden">
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 {/* Project Image */}
                 <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>

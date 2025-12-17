@@ -56,7 +56,7 @@ export const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="card-metallic hover:shadow-glow transition-all duration-300 group">
+            <Card key={index} className="card-glass hover:shadow-glow transition-all duration-300 group">
               <CardHeader className="text-center">
                 <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${service.color} p-0.5 mb-4`}>
                   <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
@@ -87,7 +87,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Process Section */}
-        <Card className="card-metallic">
+        <Card className="card-glass">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">How I Work</CardTitle>
           </CardHeader>

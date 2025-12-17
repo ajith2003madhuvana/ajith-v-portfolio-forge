@@ -16,7 +16,7 @@ export const AboutSection = () => {
         </div>
 
         {/* Bio */}
-        <Card className="card-metallic">
+        <Card className="card-glass">
           <CardContent className="p-8">
             <div className="space-y-6 text-lg leading-relaxed text-foreground">
               <p>
@@ -34,7 +34,7 @@ export const AboutSection = () => {
         <div className="space-y-6">
           <h3 className="text-3xl font-bold text-center">Education</h3>
           <div className="space-y-6">
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <GraduationCap className="text-primary" />
@@ -56,7 +56,7 @@ export const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <GraduationCap className="text-accent" />
@@ -84,7 +84,7 @@ export const AboutSection = () => {
         <div className="space-y-6">
           <h3 className="text-3xl font-bold text-center">Certifications</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-primary">Microsoft Azure Fundamentals</h4>
@@ -93,7 +93,7 @@ export const AboutSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-primary">Mastercard Cybersecurity Job Simulation</h4>
@@ -102,7 +102,7 @@ export const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-primary">Foundations of Cybersecurity</h4>
@@ -111,7 +111,7 @@ export const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-primary">C Programming & CSS Training</h4>
@@ -136,7 +136,7 @@ export const AboutSection = () => {
               'Continuous Learning',
               'Task Prioritization'
             ].map((skill) => (
-              <Card key={skill} className="card-metallic text-center">
+              <Card key={skill} className="card-glass text-center">
                 <CardContent className="p-4">
                   <h4 className="text-sm font-semibold gradient-text">{skill}</h4>
                 </CardContent>

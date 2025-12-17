@@ -129,8 +129,18 @@ All colors MUST be HSL for consistency and theming.
     @apply border-border;
   }
 
+  html, body {
+    background-color: hsl(218 25% 4%);
+    color: hsl(210 40% 98%);
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
   }
 }
 
