@@ -65,7 +65,7 @@ export const ExperienceSection = () => {
         {/* Experience Timeline */}
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="card-metallic hover:shadow-glow transition-all duration-300">
+            <Card key={index} className="card-glass hover:shadow-glow transition-all duration-300">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <CardTitle className="flex items-center gap-3">

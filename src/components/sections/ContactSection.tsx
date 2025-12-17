@@ -73,7 +73,7 @@ export const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="card-metallic">
+          <Card className="card-glass">
             <CardHeader>
               <CardTitle className="text-2xl">Send Me a Message</CardTitle>
             </CardHeader>
@@ -144,7 +144,7 @@ export const ContactSection = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             {/* Contact Details */}
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardHeader>
                 <CardTitle className="text-2xl">Contact Information</CardTitle>
               </CardHeader>
@@ -182,7 +182,7 @@ export const ContactSection = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardHeader>
                 <CardTitle className="text-2xl">Connect With Me</CardTitle>
               </CardHeader>
@@ -220,7 +220,7 @@ export const ContactSection = () => {
             </Card>
 
             {/* Availability */}
-            <Card className="card-metallic">
+            <Card className="card-glass">
               <CardHeader>
                 <CardTitle className="text-2xl">Availability</CardTitle>
               </CardHeader>
