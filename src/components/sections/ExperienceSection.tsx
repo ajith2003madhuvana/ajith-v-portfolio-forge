@@ -56,70 +56,62 @@ export const ExperienceSection = () => {
     <section 
       id="experience" 
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-20 px-4 sm:px-6 lg:px-8 bg-surface/30 scroll-animate ${isVisible ? 'visible' : ''}`}
+      className={`py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-surface/30 scroll-animate ${isVisible ? 'visible' : ''}`}
     >
-      <div className="max-w-4xl mx-auto space-y-12">
-        {/* Header */}
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-bold">
+      <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
+        <div className="text-center space-y-3 sm:space-y-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
             My <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Professional journey and hands-on learning experiences
           </p>
         </div>
 
-        {/* Experience Timeline */}
-        <div className="space-y-8">
+        <div className="space-y-5 sm:space-y-8">
           {experiences.map((exp, index) => (
             <Card key={index} className="card-glass hover:shadow-glow transition-all duration-300">
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <CardTitle className="flex items-center gap-3">
-                    <Briefcase className="text-primary" />
-                    <div>
-                      <h3 className="text-xl">{exp.title}</h3>
-                      <p className="text-lg text-muted-foreground font-normal">{exp.company}</p>
+              <CardHeader className="p-4 sm:p-6">
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  <CardTitle className="flex items-start gap-2 sm:gap-3">
+                    <Briefcase className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <div className="min-w-0">
+                      <h3 className="text-lg sm:text-xl leading-tight">{exp.title}</h3>
+                      <p className="text-base sm:text-lg text-muted-foreground font-normal">{exp.company}</p>
                     </div>
                   </CardTitle>
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <Badge variant="secondary" className="w-fit">
-                      {exp.type}
-                    </Badge>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Calendar size={16} />
-                    <span>{exp.period}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MapPin size={16} />
-                    <span>{exp.location}</span>
+                  <div className="flex flex-wrap gap-2 items-center">
+                    <Badge variant="secondary" className="text-xs">{exp.type}</Badge>
+                    <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground">
+                      <Calendar size={14} />
+                      <span>{exp.period}</span>
+                    </div>
+                    <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground">
+                      <MapPin size={14} />
+                      <span>{exp.location}</span>
+                    </div>
                   </div>
                 </div>
               </CardHeader>
               
-              <CardContent className="space-y-6">
-                {/* Achievements */}
+              <CardContent className="px-4 pb-4 sm:px-6 sm:pb-6 space-y-4 sm:space-y-6">
                 <div>
-                  <h4 className="font-semibold mb-3 text-primary">Key Achievements</h4>
-                  <ul className="space-y-2">
+                  <h4 className="font-semibold mb-2 sm:mb-3 text-primary text-sm sm:text-base">Key Achievements</h4>
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {exp.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{achievement}</span>
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-sm text-muted-foreground">{achievement}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Technologies */}
                 <div>
-                  <h4 className="font-semibold mb-3 text-primary">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-semibold mb-2 sm:mb-3 text-primary text-sm sm:text-base">Technologies Used</h4>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {exp.technologies.map((tech, i) => (
-                      <Badge key={i} variant="outline" className="border-accent text-accent">
+                      <Badge key={i} variant="outline" className="border-accent text-accent text-xs">
                         {tech}
                       </Badge>
                     ))}
