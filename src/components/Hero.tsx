@@ -80,7 +80,7 @@ export const Hero = () => {
             <div className="card-glass px-5 py-3 rounded-full">
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-primary rounded-full animate-glow"></div>
-                <span className="text-sm font-semibold text-primary">Java Developer Intern at TAP Academy</span>
+                <span className="text-sm font-semibold text-primary">Actively Seeking Opportunities</span>
               </div>
             </div>
             <div className="card-glass px-5 py-3 rounded-full">

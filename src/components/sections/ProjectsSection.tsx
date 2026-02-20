@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Brain, Shield, Eye, Film } from 'lucide-react';
+import { ExternalLink, Github, Brain, Shield, Eye, Film, BookOpen } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import secureMedImage from '@/assets/securemed-cybersecurity.jpg';
 import faceDetectionImage from '@/assets/face-detection-project.jpg';
@@ -78,6 +78,25 @@ const projects = [
     icon: Film,
     color: 'from-yellow-500 to-orange-500',
     liveUrl: 'https://ajith2003madhuvana.github.io/CineReview-Movie-App/',
+    githubUrl: ''
+  },
+  {
+    title: 'LearnEye – Innovative AI Course Generator for Adaptive Learning',
+    description: 'AI-powered adaptive learning platform that dynamically generates personalized courses and automatically adjusts the learning path based on learner performance using Google Gemini API.',
+    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=400&h=300&fit=crop',
+    category: 'AI & Education',
+    technologies: ['React.js', 'Tailwind CSS', 'JavaScript', 'Google Gemini API', 'Prompt Engineering', 'LocalStorage', 'Vercel'],
+    features: [
+      'AI-generated personalized course modules',
+      'Adaptive learning path based on quiz performance',
+      'Quiz-based evaluation after each module',
+      'User onboarding with learner persona',
+      'Progress persistence using localStorage',
+      'Clean and intuitive user interface'
+    ],
+    icon: BookOpen,
+    color: 'from-emerald-500 to-teal-500',
+    liveUrl: 'https://learn-eye-adaptive-learning.vercel.app/',
     githubUrl: ''
   }
 ];
