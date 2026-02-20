@@ -6,10 +6,10 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const experiences = [
   {
     title: 'Java Developer Intern',
-    company: 'AP Academy',
+    company: 'TAP Academy',
     location: 'Bengaluru',
-    period: 'June 2025 – Present',
-    type: 'Internship',
+    period: 'June 2025 – Dec 2025',
+    type: 'Internship (Completed)',
     achievements: [
       'Developing skills in Java, SQL, and fundamental software development concepts',
       'Learning data structures and algorithms for efficient programming',
